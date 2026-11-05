@@ -44,9 +44,17 @@ Audit d'équité du score de récidive **COMPAS** et d'un modèle de prédiction
 | Taux de faux négatifs (récidivistes classés « faible risque ») | 28,5 % | **49,6 %** |
 | Exactitude | 64,9 % | 67,2 % |
 
-L'exactitude est presque identique, mais **les erreurs ne tombent pas sur les mêmes personnes**.
+L'exactitude est presque identique, mais **les erreurs ne tombent pas sur les mêmes personnes**. Le même déséquilibre se retrouve dans nos propres modèles, qui n'ont pourtant jamais vu la race :
+
+![Faux positifs et faux négatifs par groupe](figures/erreurs_par_groupe.png)
+*Taux d'erreur par groupe sur le jeu de test, pour COMPAS et nos deux modèles (l'argument de ProPublica).*
 
 ### 2. Le théorème d'impossibilité, vérifié sur les données
+
+Pourtant, à score égal, les taux de récidive observés sont proches dans les deux groupes : le score est globalement **calibré**.
+
+![Calibration du score COMPAS](figures/calibration_compas.png)
+*Taux de récidive observé pour chaque score COMPAS, par groupe (l'argument de Northpointe).*
 
 Selon Chouldechova (2017), FPR = p/(1−p) × (1−précision)/précision × (1−FNR), où *p* est le taux de récidive du groupe. À partir des seuls taux de base (52,3 % et 39,1 %), précisions et FNR, la formule retrouve **exactement** les FPR de COMPAS (0,423 et 0,220). Dès que les taux de base diffèrent, un score calibré ne peut pas avoir des taux d'erreur égaux : **ProPublica et Northpointe avaient tous deux raison**, chacun selon sa définition de l'équité.
 

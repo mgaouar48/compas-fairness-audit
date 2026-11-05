@@ -44,9 +44,17 @@ A fairness audit of the **COMPAS** recidivism risk score and of a prediction mod
 | False negative rate (reoffenders labelled "low risk") | 28.5% | **49.6%** |
 | Accuracy | 64.9% | 67.2% |
 
-Accuracy is almost identical, but **the errors do not fall on the same people**.
+Accuracy is almost identical, but **the errors do not fall on the same people**. The same imbalance appears in our own models, even though they never see race:
+
+![False positives and false negatives by group](figures/erreurs_par_groupe.png)
+*Error rates by group on the test set, for COMPAS and our two models (ProPublica's argument). Chart labels are in French.*
 
 ### 2. The impossibility theorem, verified on the data
+
+Yet, for a given score, observed recidivism rates are close in both groups: the score is broadly **calibrated**.
+
+![Calibration of the COMPAS score](figures/calibration_compas.png)
+*Observed recidivism rate for each COMPAS score, by group (Northpointe's argument).*
 
 Following Chouldechova (2017), FPR = p/(1−p) × (1−precision)/precision × (1−FNR), where *p* is the group's recidivism rate. Using only the base rates (52.3% and 39.1%), precisions and FNRs, the formula recovers COMPAS's false positive rates **exactly** (0.423 and 0.220). Whenever base rates differ, a calibrated score cannot have equal error rates: **ProPublica and Northpointe were both right**, each under their own definition of fairness.
 

@@ -8,6 +8,14 @@ A fairness audit of the **COMPAS** recidivism risk score and of a prediction mod
 
 ---
 
+## Background
+
+In the United States, some courts use a software tool called **COMPAS** to help judges decide, for example, whether an arrested person can remain free while awaiting trial. COMPAS gives each defendant a score from 1 to 10 that **estimates their risk of being arrested again** within two years.
+
+In 2016, journalists at **ProPublica** compared these scores with what actually happened to about 7,000 defendants in Florida. Their finding: the software does not make the same mistakes for every group. Among people who were **not** rearrested, African-American defendants had been labelled "high risk" almost **twice as often** as Caucasian defendants. The company behind the tool, Northpointe, replied that its score was nonetheless equally reliable for all groups.
+
+This project revisits that debate with the public data: it checks both arguments, shows why they can both be true at the same time, and tests whether these disparities can be corrected, and at what cost. Behind this case lies a broader question: **a model is never fairer than the data it was trained on**, and an automated decision that looks objective can reproduce an injustice.
+
 ## Research questions
 
 1. Does the COMPAS score make the same errors for African-American and Caucasian defendants?

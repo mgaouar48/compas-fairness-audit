@@ -8,6 +8,14 @@ Audit d'équité du score de récidive **COMPAS** et d'un modèle de prédiction
 
 ---
 
+## Contexte
+
+Aux États-Unis, certains tribunaux utilisent un logiciel appelé **COMPAS** pour aider les juges à décider, par exemple, si une personne arrêtée peut rester en liberté en attendant son procès. COMPAS attribue à chaque prévenu une note de 1 à 10 qui **estime son risque d'être de nouveau arrêté** dans les deux ans.
+
+En 2016, les journalistes de **ProPublica** ont comparé ces notes à ce qui s'était réellement passé pour environ 7 000 prévenus de Floride. Leur constat : le logiciel ne se trompe pas de la même façon selon les groupes. Parmi les personnes qui n'ont **pas** été réarrêtées, les prévenus afro-américains avaient été classés « à haut risque » presque **deux fois plus souvent** que les prévenus caucasiens. L'éditeur du logiciel, Northpointe, a répondu que sa note était pourtant fiable de la même manière pour tous les groupes.
+
+Ce projet reprend ce débat avec les données publiques : il vérifie les deux arguments, montre pourquoi ils peuvent être vrais en même temps, et teste s'il est possible de corriger ces écarts, et à quel prix. Derrière ce cas, une question plus générale : **un modèle n'est jamais plus juste que les données qui l'ont nourri**, et une décision automatisée qui paraît objective peut reproduire une injustice.
+
 ## Questions étudiées
 
 1. Le score COMPAS commet-il les mêmes erreurs pour les prévenus afro-américains et caucasiens ?

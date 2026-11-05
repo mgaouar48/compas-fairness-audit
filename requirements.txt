@@ -1,0 +1,6 @@
+# Versions utilisées pour obtenir les résultats (Python 3.13, Kaggle)
+fairlearn==0.15.0
+scikit-learn==1.6.1
+pandas==2.3.3
+numpy==2.1.3
+matplotlib==3.10.0

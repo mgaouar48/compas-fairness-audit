@@ -87,6 +87,7 @@ Selon Chouldechova (2017), FPR = p/(1−p) × (1−précision)/précision × (1�
 - **Égaliser les erreurs détruit la calibration** : l'écart de précision passe de 0,084 à 0,138.
 - **Une métrique d'équité ne se lit jamais seule.** `ExponentiatedGradient` paraît très équitable, mais seulement parce qu'il ne prédit presque plus rien (0,540 contre 0,529 pour le modèle naïf).
 - **Choisir une métrique est un choix de valeurs**, qui relève du droit et du débat public autant que de la technique.
+- **Un compromis qu'on retrouve dans l'explicabilité.** Le théorème d'impossibilité montre qu'un modèle ne peut pas satisfaire tous les critères d'équité à la fois. On retrouve une idée proche dans les travaux de Leila Amgoud, Philippe Muller et Henri Trenquier (IJCAI 2023) : une explication construite à partir d'un échantillon ne peut pas être à la fois garantie pour chaque décision et toujours correcte. Équité comme explication, une IA de confiance oblige à choisir entre des propriétés souhaitables.
 
 ## Limites
 
@@ -125,6 +126,7 @@ compas-fairness-audit/
 - Chouldechova, A. (2017). [Fair Prediction with Disparate Impact: A Study of Bias in Recidivism Prediction Instruments](https://arxiv.org/abs/1703.00056). *Big Data*, 5(2), 153-163.
 - Dressel, J., Farid, H. (2018). [The accuracy, fairness, and limits of predicting recidivism](https://doi.org/10.1126/sciadv.aao5580). *Science Advances*, 4(1).
 - Barenstein, M. (2019). [ProPublica's COMPAS Data Revisited](https://arxiv.org/abs/1906.04711). *arXiv:1906.04711*.
+- Amgoud, L., Muller, P., Trenquier, H. (2023). Leveraging Argumentation for Generating Robust Sample-based Explanations. *Proceedings of IJCAI 2023*, 3104-3111.
 - [Fairlearn](https://fairlearn.org/), version 0.15.0.
 
 ## Auteur

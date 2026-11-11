@@ -87,6 +87,7 @@ Following Chouldechova (2017), FPR = p/(1−p) × (1−precision)/precision × (
 - **Equalising errors breaks calibration**: the precision gap rises from 0.084 to 0.138.
 - **A fairness metric must never be read alone.** `ExponentiatedGradient` looks very fair, but only because it barely predicts anything (0.540 versus 0.529 for the naive baseline).
 - **Choosing a fairness metric is a value judgement**, a matter for law and public debate as much as for engineering.
+- **A similar trade-off appears in explainability.** The impossibility theorem shows that a model cannot satisfy every fairness criterion at once. A related idea appears in the work of Leila Amgoud, Philippe Muller and Henri Trenquier (IJCAI 2023): an explanation built from a sample cannot be both guaranteed for every decision and always correct. For fairness as for explanation, trustworthy AI requires choosing between desirable properties.
 
 ## Limitations
 
@@ -113,6 +114,7 @@ jupyter notebook compas_fairness_audit.ipynb
 - Chouldechova, A. (2017). [Fair Prediction with Disparate Impact: A Study of Bias in Recidivism Prediction Instruments](https://arxiv.org/abs/1703.00056). *Big Data*, 5(2), 153-163.
 - Dressel, J., Farid, H. (2018). [The accuracy, fairness, and limits of predicting recidivism](https://doi.org/10.1126/sciadv.aao5580). *Science Advances*, 4(1).
 - Barenstein, M. (2019). [ProPublica's COMPAS Data Revisited](https://arxiv.org/abs/1906.04711). *arXiv:1906.04711*.
+- Amgoud, L., Muller, P., Trenquier, H. (2023). Leveraging Argumentation for Generating Robust Sample-based Explanations. *Proceedings of IJCAI 2023*, 3104-3111.
 - [Fairlearn](https://fairlearn.org/), version 0.15.0.
 
 ## Author
